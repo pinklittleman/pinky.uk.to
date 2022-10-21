@@ -2,6 +2,7 @@ body{
     margin: 0;
 }
 .section1{
+    height: 1920px;
     background-color: linear-gradient(90deg, #fcff59, #ffa41c, #ff3030, #c815ff,#1c3eff, #fcff59, #ffa41c, #ff3030);
     background-size: 600% 600%;
     animation: gradient ease-in-out infinite;
