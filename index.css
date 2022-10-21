@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.section1{
+    background-color: linear-gradient(90deg, #fcff59, #ffa41c, #ff3030, #c815ff,#1c3eff, #fcff59, #ffa41c, #ff3030);
+    background-size: 600% 600%;
+    animation: gradient ease-in-out infinite;
+    animation-duration: 30s;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% ,0%;
+    }
+    50% {
+        background-position: 100%, 100%;
+    }
+    100% {
+        background-position: 0%, 0%;
+    }
+}
