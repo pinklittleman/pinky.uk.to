@@ -27,9 +27,9 @@ body{
 }
 @font-face {
     font-family: Font1;
-    src: url('Fonts/MADE-Soulmaze-Italic.ttf');
+    src: url('/files/fonts/MADE-Soulmaze-Italic.ttf');
 }
 @font-face {
     font-family: Font2;
-    src: url('Fonts/MADE-Soulmaze.ttf');
+    src: url('files/fonts/MADE-Soulmaze.ttf');
 }
