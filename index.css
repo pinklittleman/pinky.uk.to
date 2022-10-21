@@ -7,6 +7,10 @@ body{
     background-size: 600% 600%;
     animation: gradient ease-in-out infinite;
     animation-duration: 30s;
+    text-align: center;
+}
+.intro{
+    font-size: x-large;
 }
 @keyframes gradient {
     0% {
