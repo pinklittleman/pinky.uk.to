@@ -3,9 +3,8 @@ body{
 }
 .section1{
     height: 1000px;
-    background: linear-gradient(90deg, #9c00ff, #201925);
 }
-.intro{
+.main1{
     margin: 0;
     font-family: Font1;
     font-size: 70px;
