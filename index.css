@@ -3,9 +3,6 @@ body{
 }
 .section1{
     height: 1000px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
 }
 .main1{
     margin: 0;
@@ -24,6 +21,8 @@ body{
     border-radius: 0px;
     box-shadow: 2px 6px 10px rgba(16,16,16,.75);
     text-shadow: 0px 0px 6px rgba(89,0,255,.47);
+    display: block;
+    margin: 0;
 }
 .css-input:focus {
     outline:none;
