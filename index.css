@@ -10,6 +10,21 @@ body{
     font-size: 70px;
     text-align: center;
 }
+.css-input {
+    padding: 6px;
+    font-size: 19px;
+    border-width: 0px;
+    border-color: #f1f1f1;
+    background-color: #f4f4f4;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 2px 6px 10px rgba(16,16,16,.75);
+    text-shadow: 0px 0px 6px rgba(89,0,255,.47);
+}
+.css-input:focus {
+    outline:none;
+}
 @font-face{
     font-family: Font1;
     src: url('/files/fonts/MADE-Soulmaze-Italic.ttf');
