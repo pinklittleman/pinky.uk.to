@@ -3,6 +3,9 @@ body{
 }
 .section1{
     height: 1000px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
 .main1{
     margin: 0;
