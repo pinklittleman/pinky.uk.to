@@ -1,23 +1,10 @@
 // Minimal amount of secure websocket server and stuff
 var fs = require('fs');
 var app = require('express')();
-var cors = require("cors");
 // read ssl certificate
 var privateKey = fs.readFileSync('/home/pink/ssl-cert/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/home/pink/ssl-cert/fullchain.pem', 'utf8');
 
-var allowedOrigins = []
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}
-
-app.use(cors(corsOptions));
 
 var credentials = { key: privateKey, cert: certificate};
 var https = require('https')
