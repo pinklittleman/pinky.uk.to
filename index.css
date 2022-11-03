@@ -22,7 +22,7 @@ body{
     box-shadow: 2px 6px 10px rgba(16,16,16,.75);
     text-shadow: 0px 0px 6px rgba(89,0,255,.47);
     display: block;
-    margin: 0;
+    margin: auto;
 }
 .css-input:focus {
     outline:none;
