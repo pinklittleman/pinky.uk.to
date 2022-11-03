@@ -1,6 +1,7 @@
 // Minimal amount of secure websocket server and stuff
 var fs = require('fs');
 var app = require('express')();
+var cors = require("cors");
 // read ssl certificate
 var privateKey = fs.readFileSync('/home/pink/ssl-cert/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/home/pink/ssl-cert/fullchain.pem', 'utf8');
@@ -14,10 +15,10 @@ httpsServer.listen(5000);
 
 var io = require('socket.io')(httpsServer);
 
+app.use(cors());
 app.get('/', function(req, res){
     //send the index.html file for all requests
     res.sendFile(__dirname + '/index.html');
-    res.sendFile(__dirname + '/files/fonts/MADE-Soulmaze-Italic.ttf');
 });
 
 io.on('connection', (socket) => {
