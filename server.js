@@ -17,6 +17,7 @@ var io = require('socket.io')(httpsServer);
 app.get('/', function(req, res){
     //send the index.html file for all requests
     res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/files/fonts/MADE-Soulmaze-Italic.ttf');
 });
 
 io.on('connection', (socket) => {
