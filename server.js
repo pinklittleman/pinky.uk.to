@@ -6,7 +6,7 @@ var cors = require("cors");
 var privateKey = fs.readFileSync('/home/pink/ssl-cert/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/home/pink/ssl-cert/fullchain.pem', 'utf8');
 
-var allowedOrigins = ['https://pinky.uk.to/index.js', 'https://pinky.uk.to/files/fonts/']
+var allowedOrigins = []
 var corsOptions = {
   origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1) {
