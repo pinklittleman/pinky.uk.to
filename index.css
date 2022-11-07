@@ -12,6 +12,10 @@ body{
     text-align: center;
     color:#ffffff;
 }
+#butt{
+    display: block;
+    margin: auto;
+}
 .css-input {
     padding: 6px;
     font-size: 19px;
