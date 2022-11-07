@@ -15,6 +15,8 @@ httpsServer.listen(5000);
 
 var io = require('socket.io')(httpsServer);
 
+let chat = []
+
 app.get('/', function(req, res){
     //send the index.html file for all requests
     res.sendFile(__dirname + '/index.html');
@@ -29,6 +31,8 @@ io.on('connection', (socket) => {
 
     function test(data){
         console.log(data)
+        chat.push(data)
+        socket.broadcast.emit('chatlogs', chat)
     }
 
     socket.on('disconnect', () => {

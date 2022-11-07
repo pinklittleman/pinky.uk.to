@@ -16,6 +16,12 @@ body{
     display: block;
     margin: auto;
 }
+#chat{
+    text-align: center;
+    height: 100px;
+    background-color: aquamarine;
+    overflow-y: scroll;
+}
 .css-input {
     padding: 6px;
     font-size: 19px;
