@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Pinky.uk.to </title>
     <link rel="stylesheet" href="https://pinky.uk.to/index.css">
-    <script defer src="https://pinky.uk.to/index.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="https://pinky.uk.to/files/photos/style1.png">
     <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"></script>
 </head>
@@ -17,5 +16,17 @@
         <button id="butt" onclick="send()">send</button>
         <p id="chat"></p>
     </section>
+    <script defer>
+        const socket = io.connect('wss://pinky.uk.to:5000');
+
+        var email
+
+        function send(){
+        console.log('pressed')
+        email = document.getElementById('textin').value;
+        socket.emit('test', email)
+    }
+
+    </script>
 </body>
 </html>
