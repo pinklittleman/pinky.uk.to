@@ -1,0 +1,6 @@
+IndexIgnore *
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+ErrorDocument 404 "<H1>Stop phishing</H1>"
