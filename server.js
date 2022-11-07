@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
     // log the user that has connected and their socketID
     console.log('a user connected: ' + socket.id);
 
+    socket.on('test', test())
+    function test(data){
+        console.log(data)
+    }
+
     socket.on('disconnect', () => {
 
         // this removes the leaving socket from the list
