@@ -13,9 +13,9 @@ function send(){
 socket.on('chatlogs',toast)
 function toast(data){
     console.log(data)
-    data = chats
-    for(let i = 0; i < chats.length; i++){
-        document.getElementById('chat').innerHTML = chats[i]
+    data
+    for(let i = 0; i < data.length; i++){
+        document.getElementById('chat').innerHTML = data[i]
     }
     chat.scrollTop = chat.scrollHeight
 }
