@@ -10,7 +10,7 @@ var credentials = { key: privateKey, cert: certificate};
 var https = require('https')
 
 var httpsServer = https.createServer(credentials, app);
-httpsServer.listen();
+httpsServer.listen(443);
 
 
 var io = require('socket.io')(httpsServer);
