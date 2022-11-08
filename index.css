@@ -21,7 +21,7 @@ body{
     height: 100px;
     background-color: rgba(255, 183, 136, 0.493);
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 50px;
     overflow-y: scroll;
 }
 .css-input {
