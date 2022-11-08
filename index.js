@@ -1,6 +1,7 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
 
 var email
+var chater = document.getElementById('chat')
 
 function send(){
     console.log('pressed')
@@ -15,8 +16,8 @@ function send(){
     }
 
 const updateScrollPercentage = function() { 
-const heightOfWindow = window.innerHeight,
-	contentScrolled = window.pageYOffset,
+const heightOfWindow = chater.innerHeight,
+	contentScrolled = chater.pageYOffset,
 	bodyHeight = document.body.offsetHeight
  
     if(bodyHeight - contentScrolled <= heightOfWindow) {
