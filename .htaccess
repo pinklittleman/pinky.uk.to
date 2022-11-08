@@ -1,4 +1,4 @@
 ErrorDocument 404 /404.html
 
-Redirect 301 / https://pinky.uk.to:5000
+<!-- Redirect 301 / https://pinky.uk.to:5000 -->
 
