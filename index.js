@@ -1,6 +1,6 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
 
-var email
+var email, chats = []
 var chat = document.getElementById('chat')
 
 function send(){
@@ -11,6 +11,7 @@ function send(){
     
 socket.on('chatlogs',toast)
 function toast(data){
+    data = 
     document.getElementById('chat').innerHTML = data
     chat.scrollTop = chat.scrollHeight
 }
