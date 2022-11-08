@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
 
     function test(data){
         console.log(data)
-        chat.push(data)
+        chat.push(data + '<br>')
         socket.broadcast.emit('chatlogs', chat)
     }
 
