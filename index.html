@@ -25,12 +25,13 @@
         console.log('pressed')
         email = document.getElementById('textin').value;
         socket.emit('test', email)
+        }
+    
         socket.on('chatlogs',toast)
         function toast(data){
             document.getElementById('chat').innerHTML = data
-        }
-    }
-
+            }
+    
     </script>
 </body>
 </html>
