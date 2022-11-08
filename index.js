@@ -12,8 +12,5 @@ function send(){
 socket.on('chatlogs',toast)
 function toast(data){
     document.getElementById('chat').innerHTML = data
-}
-
-setInterval(() => {
     chat.scrollTop = chat.scrollHeight
-}, 500);
+}
