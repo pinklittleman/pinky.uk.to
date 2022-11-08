@@ -18,7 +18,7 @@ function send(){
 const updateScrollPercentage = function() { 
 const heightOfWindow = chater.innerHeight,
 	contentScrolled = chater.pageYOffset,
-	bodyHeight = document.body.offsetHeight
+	bodyHeight = chater.body.offsetHeight
  
     if(bodyHeight - contentScrolled <= heightOfWindow) {
     		console.log('100%')
