@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
         console.log(data)
         chat.push(`${data} <br>`)
         for(let i = 0; i < chat.length; i++){
-            socket.broadcast.emit('chatlogs', i)
+            socket.broadcast.emit('chatlogs', chat[i])
         }
     }
 
