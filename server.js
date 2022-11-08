@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
         var d = new Date();          
         var n = d.toLocaleString([], { hour12: true});
         console.log(data)
-        chat.push(`${n}    ::    ${data}     <br>`)
+        chat.push(`${n}        ${data}     <br>`)
         socket.broadcast.emit('chatlogs', chat)
         
     }
