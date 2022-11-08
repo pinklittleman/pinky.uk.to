@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
     function test(data){
         console.log(data)
         chat.push(`${data} <br>`)
-        for(let i; i < chat.length; i++){
+        for(let i = 0; i < chat.length; i++){
             socket.broadcast.emit('chatlogs', i)
         }
     }
