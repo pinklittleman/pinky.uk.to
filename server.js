@@ -16,8 +16,6 @@ httpsServer.listen(5000);
 var io = require('socket.io')(httpsServer);
 
 let chat = []
-var d = new Date();          
-var n = d.toLocaleString([], { hour12: true});
 
 app.get('/', function(req, res){
     //send the index.html file for all requests
@@ -25,13 +23,15 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', (socket) => {
-
+    
     // log the user that has connected and their socketID
     console.log('a user connected: ' + socket.id);
-
+    
     socket.on('test',test)
-
+    
     function test(data){
+        var d = new Date();          
+        var n = d.toLocaleString([], { hour12: true});
         console.log(data)
         chat.push(`${n}    ::    ${data}     <br>`)
         socket.broadcast.emit('chatlogs', chat)
