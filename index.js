@@ -1,7 +1,7 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
 
 var email
-var chater = document.getElementById('chat')
+var chat = document.getElementById('chat')
 
 function send(){
     console.log('pressed')
@@ -9,26 +9,11 @@ function send(){
     socket.emit('test', email)
 }
     
-    socket.on('chatlogs',toast)
-
-    function toast(data){
-        document.getElementById('chat').innerHTML = data
-    }
-
-const updateScrollPercentage = function() { 
-const heightOfWindow = chater.innerHeight,
-	contentScrolled = chater.pageYOffset,
-	bodyHeight = chater.body.offsetHeight
- 
-    if(bodyHeight - contentScrolled <= heightOfWindow) {
-    		console.log('100%')
-    }
-    else {
-    		const total = bodyHeight - heightOfWindow,
-    			got = contentScrolled,
-    			percent = parseInt((got/total) * 100)
-    		console.log(percent+'%')
-    }
+socket.on('chatlogs',toast)
+function toast(data){
+    document.getElementById('chat').innerHTML = data
 }
- 
-window.addEventListener('scroll', updateScrollPercentage)
+
+setInterval(() => {
+    chat.scrollTop = chat.scrollHeight
+}, 500);
