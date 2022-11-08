@@ -16,6 +16,8 @@ httpsServer.listen(5000);
 var io = require('socket.io')(httpsServer);
 
 let chat = []
+var d = new Date();          
+var n = d.toLocaleString([], { hour12: true});
 
 app.get('/', function(req, res){
     //send the index.html file for all requests
@@ -31,10 +33,9 @@ io.on('connection', (socket) => {
 
     function test(data){
         console.log(data)
-        chat.push(`${data} <br>`)
-        for(let i = 0; i < chat.length; i++){
-            socket.broadcast.emit('chatlogs', chat[i])
-        }
+        chat.push(`${n}  ${data} <br>`)
+        socket.broadcast.emit('chatlogs', chat)
+        
     }
 
     socket.on('disconnect', () => {
