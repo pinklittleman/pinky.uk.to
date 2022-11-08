@@ -1,6 +1,6 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
 
-var email, chats = []
+var email, chats
 var chat = document.getElementById('chat')
 
 function send(){
