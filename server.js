@@ -15,6 +15,9 @@ httpsServer.listen(5000);
 
 var io = require('socket.io')(httpsServer);
 
+const jsonFile = require("https://pinky.uk.to/chat.json");
+console.log(jsonFile);
+
 let chat = []
 
 app.get('/', function(req, res){
