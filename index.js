@@ -5,7 +5,6 @@ let chats
 var chat = document.getElementById('chat')
 
 function send(){
-    console.log('pressed')
     email = document.getElementById('textin').value;
     socket.emit('test', email)
 }
