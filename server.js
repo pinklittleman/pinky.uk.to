@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
         var n = d.toLocaleString([], { hour12: true});
         console.log(data)
         chat.push(`${n} &#160;/&#160;/&#160; ${data}     <br>`)
-        socket.broadcast.emit('chatlogs', chat)
+        socket.emit('chatlogs', chat)
         
     }
 
