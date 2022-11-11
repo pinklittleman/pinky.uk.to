@@ -2,6 +2,7 @@ body{
     font-family: Font1;
     background-color: rgb(15, 15, 15);
     color: rgb(255, 56, 56);
+    font-size: 50px;
 }
 
 @font-face {
