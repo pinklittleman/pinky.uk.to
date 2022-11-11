@@ -29,3 +29,4 @@ if ($uploadOk == 0) {
   }
 }
 ?>
+<link rel="stylesheet" href="https://pinky.uk.to/files/style.css">
