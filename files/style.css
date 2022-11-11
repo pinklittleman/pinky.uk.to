@@ -1,0 +1,8 @@
+body{
+    font-family: Font1;
+}
+
+@font-face {
+    font-family: Font1;
+    src: url('/files/fonts/MADE-Soulmaze.ttf');
+}
