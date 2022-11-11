@@ -9,13 +9,14 @@ body{
     font-family: Font1;
     height: 40px;
     width: 60px;
+    margin: 20px;
 }
 
 .button2{
     font-family: Font1;
     height: 40px;
     width: 60px;
-    padding-right: 50px;
+    
 }
 
 @font-face {
