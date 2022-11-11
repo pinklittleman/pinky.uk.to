@@ -5,13 +5,13 @@ body{
     font-size: 50px;
 }
 
-#button1{
+.button1{
     font-family: Font1;
     height: 40px;
     width: 60px;
 }
 
-#button2{
+.button2{
     font-family: Font1;
 }
 
