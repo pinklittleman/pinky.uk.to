@@ -19,10 +19,10 @@ let car = {
 }
 
 function resetCanvasSize(e){
-    
+
 }
 function keyboardDown(e) {
-    console.log(e.keyCode)
+    console.log(e)
 }
 
 document.addEventListener('keydown', keyboardDown)
