@@ -75,7 +75,8 @@ function gameloop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     draw()
     console.log(car)
-
+    
+    requestAnimationFrame(gameloop)
 }
 
 document.addEventListener('keyup', keyboardUp)
