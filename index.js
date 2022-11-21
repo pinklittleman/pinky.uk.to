@@ -99,6 +99,8 @@ function updatePosition(p) {
 }
 
 function draw() {
+    ctx.fillStyle = 'red';
+    ctx.fillRect(80, 60, 140, 30);
   ctx.clearRect(0, 0, width, height)
 
   ctx.save()
