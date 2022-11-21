@@ -32,7 +32,9 @@ var state = {
 }
 
 function update(progress) {
+  console.log('progress: '+progress)
   var p = progress / 16
+  console.log('p: '+p)
 
   updateRotation(p)
   updateMovement(p)
@@ -120,15 +122,11 @@ function draw() {
 
 function loop(timestamp) {
   var progress = timestamp - lastRender
-
   update(progress)
-  console.log(state.movement)
   draw()
   
   lastRender = timestamp
   window.requestAnimationFrame(loop)
-  state.movement.x * friction
-  state.movement.y * friction
 }
 var lastRender = 0
 window.requestAnimationFrame(loop)
