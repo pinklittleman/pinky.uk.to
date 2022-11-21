@@ -64,18 +64,23 @@ function keyboardUp(e) {
 
 function draw(){
     ctx.translate(car.x, car.y)
-    ctx.beginPath()
-    ctx.fillStyle = 'white'
+    ctx.strokeStyle = 'white'
     ctx.lineWidth = 2
-    ctx.fillRect(0, 0, 20, 20)
+    ctx.beginPath()
+    ctx.moveTo(0, 0)
+    ctx.lineTo(10, 10)
+    ctx.lineTo(0, -20)
+    ctx.lineTo(-10, 10)
+    ctx.lineTo(0, 0)
     ctx.closePath()
+    ctx.stroke()
 }
 
 function gameloop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     draw()
     console.log(car)
-    
+
     requestAnimationFrame(gameloop)
 }
 
