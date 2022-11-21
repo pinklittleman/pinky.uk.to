@@ -73,10 +73,8 @@ function draw(){
 
 function gameloop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    if(car.UP){
-
-    }
     draw()
+    console.log(car)
 
 }
 
