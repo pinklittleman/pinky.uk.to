@@ -106,7 +106,7 @@ function draw() {
   ctx.rotate((Math.PI/180) * state.rotation)
 
   ctx.strokeStyle = 'white'
-  ctx.lineWidth = 5
+  ctx.lineWidth = 8
   ctx.beginPath()
   ctx.moveTo(0, 0)
   ctx.lineTo(10, 10)
