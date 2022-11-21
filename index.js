@@ -4,8 +4,8 @@ var width
 var height
 
 var resize = function() {
-  width = window.innerWidth * 2
-  height = window.innerHeight * 2
+  width = window.innerWidth
+  height = window.innerHeight
   canvas.width = width
   canvas.height = height
 }
