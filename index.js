@@ -127,6 +127,8 @@ function loop(timestamp) {
   
   lastRender = timestamp
   window.requestAnimationFrame(loop)
+  state.movement.x * friction
+  state.movement.y * friction
 }
 var lastRender = 0
 window.requestAnimationFrame(loop)
