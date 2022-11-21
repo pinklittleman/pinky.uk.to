@@ -80,10 +80,8 @@ function updateMovement(p) {
 }
 
 function updatePosition(p) {
-  state.position.x += state.movement.x
-  state.position.y += state.movement.y
-  state.movement.x * friction
-  state.movement.y * friction
+  state.position.x += state.movement.x * friction
+  state.position.y += state.movement.y * friction
 
   // Detect boundaries
   if (state.position.x > width) {
