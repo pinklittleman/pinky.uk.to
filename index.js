@@ -22,7 +22,7 @@ function resetCanvasSize(e){
 
 }
 function keyboardDown(e) {
-    console.log(e)
+    console.log(e.key)
 }
 
 document.addEventListener('keydown', keyboardDown)
