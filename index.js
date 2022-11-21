@@ -2,7 +2,7 @@ var canvas = document.getElementById("canvas")
 var ctx = canvas.getContext("2d")
 var width
 var height
-var friction = 0.004
+var friction = 0.4
 
 var resize = function() {
   width = window.innerWidth
