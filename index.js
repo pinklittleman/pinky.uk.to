@@ -1,6 +1,7 @@
-let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height
+let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,acceleration
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
+let friction = 0.04
 
 canvas.height = innerHeight
 canvas.width = innerWidth
@@ -20,6 +21,8 @@ let car = {
 
     velocity_x: 0,
     velocity_y: 0,
+
+    acceleration: 1,
 
     LEFT: false,
     RIGHT: false,
