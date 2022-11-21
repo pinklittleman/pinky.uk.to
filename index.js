@@ -66,7 +66,7 @@ function draw(){
     ctx.beginPath()
     ctx.fillStyle = 'white'
     ctx.lineWidth = 2
-    ctx.drawRect(car.x, car.y, 20, 20)
+    ctx.fillRect(car.x, car.y, 20, 20)
     ctx.closePath()
 }
 
