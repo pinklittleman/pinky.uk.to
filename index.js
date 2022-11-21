@@ -110,20 +110,12 @@ function draw() {
   ctx.beginPath()
   ctx.moveTo(0, 0)
   ctx.strokeStyle = 'blue'
-  ctx.closePath()
-  ctx.beginPath()
   ctx.lineTo(10, 10)
   ctx.strokeStyle = 'green'
-  ctx.closePath()
-  ctx.beginPath()
   ctx.lineTo(0, -20)
   ctx.strokeStyle = 'grey'
-  ctx.closePath()
-  ctx.beginPath()
   ctx.lineTo(-10, 10)
   ctx.strokeStyle = 'pink'
-  ctx.closePath()
-  ctx.beginPath()
   ctx.lineTo(0, 0)
   ctx.strokeStyle = 'white'
   ctx.closePath()
