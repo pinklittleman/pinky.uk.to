@@ -5,6 +5,15 @@ let ctx = canvas.getContext("2d")
 canvas.height = innerHeight
 canvas.width = innerWidth
 
+var resize = function() {
+    width = window.innerWidth
+    height = window.innerHeight
+    canvas.width = width
+    canvas.height = height
+}
+window.onresize = resize
+resize()
+
 let car = {
     x: innerHeight/2,
     y: innerWidth/2,
@@ -38,6 +47,5 @@ function gameloop(){
 
 document.addEventListener('keyup', keyboardUp)
 document.addEventListener('keydown', keyboardDown)
-document.addEventListener('resize', resetCanvasSize)
 
 requestAnimationFrame(gameloop)
