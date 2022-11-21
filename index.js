@@ -31,7 +31,7 @@ var state = {
   }
 }
 
-function update() {
+function update(progress) {
   var p = progress / 16
 
   updateRotation(p)
