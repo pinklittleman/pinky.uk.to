@@ -34,30 +34,30 @@ function resetCanvasSize(e){
     console.log(e)
 }
 function keyboardDown(e) {
-    if(e.key = "w"){
+    if(e.key === "w"){
         car.UP = true
     }
-    if(e.key = "s"){
+    if(e.key === "s"){
         car.DOWN = true
     }
-    if(e.key = "a"){
+    if(e.key === "a"){
         car.LEFT = true
     }
-    if(e.key = "d"){
+    if(e.key === "d"){
         car.RIGHT = true
     }
 }
 function keyboardUp(e) {
-    if(e.key = "w"){
+    if(e.key === "w"){
         car.UP = false
     }
-    if(e.key = "s"){
+    if(e.key === "s"){
         car.DOWN = false
     }
-    if(e.key = "a"){
+    if(e.key === "a"){
         car.LEFT = false
     }
-    if(e.key = "d"){
+    if(e.key === "d"){
         car.RIGHT = false
     }
 }
