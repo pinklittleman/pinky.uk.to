@@ -2,45 +2,7 @@ body{
     margin: 0;
     /* background-image:url('files/photos/https_www.pelock.comproductssteganography-online-codec.png'); */
     background-color: rgb(2, 2, 2);
-}
-.section1{
-    height: 1000px;
-}
-.main1{
-    margin: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    font-size: 70px;
-    text-align: center;
-    color:#ffffff;
-}
-#butt{
-    display: block;
-    margin: auto;
-}
-#chat{
-    text-align: center;
-    height: 200px;
-    background-color: rgba(255, 183, 136, 0.493);
-    font-family: sans-serif;
-    font-size: 30px;
-    overflow-y: scroll;
-}
-.css-input {
-    padding: 6px;
-    font-size: 19px;
-    border-width: 0px;
-    border-color: #f1f1f1;
-    background-color: #f4f4f4;
-    color: #000000;
-    border-style: solid;
-    border-radius: 0px;
-    box-shadow: 2px 6px 10px rgba(16,16,16,.75);
-    text-shadow: 0px 0px 6px rgba(89,0,255,.47);
-    display: block;
-    margin: auto;
-}
-.css-input:focus {
-    outline:none;
+    overflow: hidden;
 }
 @font-face{
     font-family: Font1;
