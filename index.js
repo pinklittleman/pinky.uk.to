@@ -108,19 +108,18 @@ function draw() {
   ctx.strokeStyle = 'white'
   ctx.lineWidth = 2
   ctx.beginPath()
-  ctx.moveTo(0, 0)
-  ctx.lineTo(10, 10)
-  ctx.lineTo(0, -20)
-  ctx.lineTo(-10, 10)
-  ctx.lineTo(0, 0)
+//   ctx.moveTo(0, 0)
+//   ctx.lineTo(10, 10)
+//   ctx.lineTo(0, -20)
+//   ctx.lineTo(-10, 10)
+//   ctx.lineTo(0, 0)
+    ctx.fillRect(150, 40, 100, 100);
   ctx.closePath()
   ctx.stroke()
   ctx.restore()
 }
 
-function loop(timestamp) {
-    ctx.fillStyle = "green";
-    ctx.fillRect(150, 40, 100, 100);
+function loop(timestamp) {    
   var progress = timestamp - lastRender
   update(progress)
   draw()
