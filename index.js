@@ -19,11 +19,25 @@ let car = {
 }
 
 function resetCanvasSize(e){
-
+    console.log(e)
 }
 function keyboardDown(e) {
-    console.log(e.key)
+    if(e.key = "w"){
+        car.UP = true
+    }
+}
+function keyboardUp(e) {
+    if(e.key = "w"){
+        car.UP = false
+    }
 }
 
+function gameloop(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+document.addEventListener('keyup', keyboardUp)
 document.addEventListener('keydown', keyboardDown)
 document.addEventListener('resize', resetCanvasSize)
+
+requestAnimationFrame(gameloop)
