@@ -68,16 +68,18 @@ function draw(){
     ctx.translate(car.x, car.y)
     ctx.strokeStyle = 'white'
     ctx.lineWidth = 2
-    ctx.beginPath()
+    // ctx.beginPath()
 
-    ctx.moveTo(0, 0)
-    ctx.lineTo(10, 10)
-    ctx.lineTo(0, -20)
-    ctx.lineTo(-10, 10)
-    ctx.lineTo(0, 0)
+    // ctx.moveTo(0, 0)
+    // ctx.lineTo(10, 10)
+    // ctx.lineTo(0, -20)
+    // ctx.lineTo(-10, 10)
+    // ctx.lineTo(0, 0)
 
-    ctx.closePath()
-    ctx.stroke()
+    // ctx.closePath()
+    // ctx.stroke()
+    ctx.fillStyle = "green";
+    ctx.fillRect(-50, -50, 100, 100);
 }
 
 function gameloop(){
