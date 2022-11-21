@@ -99,7 +99,7 @@ function updatePosition(p) {
 }
 
 function draw() {
-//   ctx.clearRect(0, 0, width, height)
+  ctx.clearRect(0, 0, width, height)
 
   ctx.save()
   ctx.translate(state.position.x, state.position.y)
@@ -119,6 +119,7 @@ function draw() {
 }
 
 function loop(timestamp) {
+    ctx.fillRect(150, 40, 100, 100);
   var progress = timestamp - lastRender
   update(progress)
   draw()
