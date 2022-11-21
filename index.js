@@ -63,10 +63,11 @@ function keyboardUp(e) {
 }
 
 function draw(){
+    ctx.translate(car.x, car.y)
     ctx.beginPath()
     ctx.fillStyle = 'white'
     ctx.lineWidth = 2
-    ctx.fillRect(car.x, car.y, 20, 20)
+    ctx.fillRect(0, 0, 20, 20)
     ctx.closePath()
 }
 
