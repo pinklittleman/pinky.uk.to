@@ -2,6 +2,7 @@ var canvas = document.getElementById("canvas")
 var ctx = canvas.getContext("2d")
 var width
 var height
+var friction = 0.04
 
 var resize = function() {
   width = window.innerWidth
@@ -121,7 +122,7 @@ function loop(timestamp) {
   var progress = timestamp - lastRender
 
   update(progress)
-  console.log(progress)
+  console.log(state)
   draw()
   
   lastRender = timestamp
