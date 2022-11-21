@@ -18,7 +18,9 @@ let car = {
     DOWN: false
 }
 
-function resetCanvasSize()
+function resetCanvasSize(e){
+    
+}
 function keyboardDown(e) {
     console.log(e.keyCode)
 }
