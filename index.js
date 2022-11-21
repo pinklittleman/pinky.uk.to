@@ -109,11 +109,11 @@ function draw() {
   ctx.fillStyle = 'white'
   ctx.lineWidth = 2
   ctx.beginPath()
-//   ctx.moveTo(0, 0)
-//   ctx.lineTo(10, 10)
-//   ctx.lineTo(0, -20)
-//   ctx.lineTo(-10, 10)
-//   ctx.lineTo(0, 0)
+  ctx.moveTo(0, 0)
+  ctx.lineTo(10, 10)
+  ctx.lineTo(0, -20)
+  ctx.lineTo(-10, 10)
+  ctx.lineTo(0, 0)
     ctx.fillRect(150, 40, 100, 100);
   ctx.closePath()
   ctx.stroke()
