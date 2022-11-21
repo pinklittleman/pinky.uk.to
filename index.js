@@ -99,9 +99,7 @@ function updatePosition(p) {
 }
 
 function draw() {
-    ctx.fillStyle = 'red';
-    ctx.fillRect(10, 10, 40, 40);
-  ctx.clearRect(0, 0, width, height)
+//   ctx.clearRect(0, 0, width, height)
 
   ctx.save()
   ctx.translate(state.position.x, state.position.y)
