@@ -128,6 +128,7 @@ function loop(timestamp) {
   lastRender = timestamp
   window.requestAnimationFrame(loop)
 }
+
 var lastRender = 0
 window.requestAnimationFrame(loop)
 
