@@ -105,14 +105,19 @@ function draw() {
   ctx.translate(state.position.x, state.position.y)
   ctx.rotate((Math.PI/180) * state.rotation)
 
-  ctx.strokeStyle = 'grey'
+  ctx.strokeStyle = 'black'
   ctx.lineWidth = 10
   ctx.beginPath()
   ctx.moveTo(0, 0)
+  ctx.strokeStyle = 'blue'
   ctx.lineTo(10, 10)
+  ctx.strokeStyle = 'green'
   ctx.lineTo(0, -20)
+  ctx.strokeStyle = 'grey'
   ctx.lineTo(-10, 10)
+  ctx.strokeStyle = 'pink'
   ctx.lineTo(0, 0)
+  ctx.strokeStyle = 'white'
   ctx.closePath()
   ctx.stroke()
   ctx.restore()
