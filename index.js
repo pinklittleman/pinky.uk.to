@@ -119,6 +119,7 @@ function draw() {
 }
 
 function loop(timestamp) {
+    ctx.fillStyle = "green";
     ctx.fillRect(150, 40, 100, 100);
   var progress = timestamp - lastRender
   update(progress)
