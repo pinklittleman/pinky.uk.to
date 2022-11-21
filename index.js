@@ -121,6 +121,7 @@ function loop(timestamp) {
   var progress = timestamp - lastRender
 
   update(progress)
+  console.log(progress)
   draw()
   
   lastRender = timestamp
