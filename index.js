@@ -82,7 +82,7 @@ function draw(){
 
 function checkupdates(){
     if(car.UP){
-        car.y =- 0.5
+        car.y --
     }
 }
 
