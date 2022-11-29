@@ -84,6 +84,15 @@ function checkupdates(){
     if(car.UP){
         car.y --
     }
+    if(car.DOWN){
+        car.y ++
+    }
+    if(car.LEFT){
+        car.x --
+    }
+    if(car.RIGHT){
+        car.x ++
+    }
 }
 
 function gameloop(){
