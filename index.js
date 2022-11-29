@@ -76,12 +76,19 @@ function draw(){
 
     // ctx.closePath()
     // ctx.stroke()
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "white";
     ctx.fillRect(car.x, car.y, 100, 100);
+}
+
+function checkupdates(){
+    if(car.UP){
+        car.y -0.5
+    }
 }
 
 function gameloop(){
     draw()
+    checkupdates()
 
     requestAnimationFrame(gameloop)
 }
