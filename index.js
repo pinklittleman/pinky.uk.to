@@ -16,8 +16,8 @@ window.onresize = resize
 resize()
 
 let car = {
-    x: innerHeight/2,
-    y: innerWidth/2,
+    x: canvas.width/2,
+    y: canvas.height/2,
 
     velocity_x: 0,
     velocity_y: 0,
