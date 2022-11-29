@@ -63,11 +63,9 @@ function keyboardUp(e) {
 }
 
 function draw(){
-    // ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    ctx.translate(car.x, car.y)
-    ctx.strokeStyle = 'white'
-    ctx.lineWidth = 2
+    // ctx.translate(car.x, car.y)
     // ctx.beginPath()
 
     // ctx.moveTo(0, 0)
