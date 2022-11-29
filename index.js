@@ -79,12 +79,11 @@ function draw(){
     // ctx.closePath()
     // ctx.stroke()
     ctx.fillStyle = "green";
-    ctx.fillRect(-50, -50, 100, 100);
+    ctx.fillRect(car.x, car.y, 100, 100);
 }
 
 function gameloop(){
     draw()
-    console.log(car)
 
     requestAnimationFrame(gameloop)
 }
