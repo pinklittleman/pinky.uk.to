@@ -34,11 +34,6 @@ function resetCanvasSize(e){
     console.log(e)
 }
 
-function drawtext(){
-    ctx.font = "30px Arial";
-    ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
-}
-
 function keyboardDown(e) {
     if(e.key === "w"){
         car.UP = true
@@ -84,6 +79,8 @@ function draw(){
     // ctx.stroke()
     ctx.fillStyle = "white";
     ctx.fillRect(car.x, car.y, 100, 100);
+    ctx.font = "30px Arial";
+    ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
 }
 
 function checkupdates(){
