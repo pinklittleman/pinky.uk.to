@@ -101,7 +101,6 @@ function checkupdates(){
 function gameloop(){
     draw()
     checkupdates()
-    drawtext()
 
     requestAnimationFrame(gameloop)
 }
