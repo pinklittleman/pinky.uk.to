@@ -33,6 +33,12 @@ let car = {
 function resetCanvasSize(e){
     console.log(e)
 }
+
+function drawtext(){
+    ctx.font = "30px Arial";
+    ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
+}
+
 function keyboardDown(e) {
     if(e.key === "w"){
         car.UP = true
@@ -65,7 +71,7 @@ function keyboardUp(e) {
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    // ctx.translate(car.x, car.y)
+    ctx.translate(car.x, car.y)
     // ctx.beginPath()
 
     // ctx.moveTo(0, 0)
@@ -98,6 +104,7 @@ function checkupdates(){
 function gameloop(){
     draw()
     checkupdates()
+    drawtext()
 
     requestAnimationFrame(gameloop)
 }
