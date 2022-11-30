@@ -2,6 +2,7 @@ body{
     margin: 0;
     /* background-image:url('files/photos/https_www.pelock.comproductssteganography-online-codec.png'); */
     background-color: rgb(2, 2, 2);
+    overflow: hidden;
 }
 canvas{
     overflow: hidden;
