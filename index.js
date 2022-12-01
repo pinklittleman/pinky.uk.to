@@ -80,7 +80,7 @@ function draw(){
     ctx.fillStyle = "white";
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "grey";
-    ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
+    ctx.fillText(`x: ${car.x+50} y: ${car.y-50}`, car.x+50, car.y-50);
     // ctx.fillText(`x: ${car.x+100} y: ${car.y}`, car.x+100, car.y);
     // ctx.fillText(`x: ${car.x} y: ${car.y+100}`, car.x, car.y+100);
     // ctx.fillText(`x: ${car.x-100} y: ${car.y-100}`, car.x+100, car.y+100);
