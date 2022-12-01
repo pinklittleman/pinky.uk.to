@@ -79,8 +79,7 @@ function draw(){
     // ctx.stroke()
     ctx.fillStyle = "white";
     ctx.fillRect(car.x, car.y, 100, 100);
-    ctx.font = "30px Arial";
-    ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
+    ctx.fillText("sus", car.x, car.y);
 }
 
 function checkupdates(){
