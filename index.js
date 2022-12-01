@@ -85,16 +85,16 @@ function draw(){
 
 function checkupdates(){
     if(car.UP){
-        car.y *= 1-friction
+        car.y --
     }
     if(car.DOWN){
-        car.y /= 1+friction
+        car.y ++
     }
     if(car.LEFT){
-        car.x *= 1-friction
+        car.x --
     }
     if(car.RIGHT){
-        car.x /= 1+friction
+        car.x ++
     }
 }
 
