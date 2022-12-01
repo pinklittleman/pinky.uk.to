@@ -83,7 +83,7 @@ function draw(){
     ctx.fillText(`x: ${car.x} y: ${car.y}`, car.x, car.y);
     ctx.fillText(`x: ${car.x+100} y: ${car.y}`, car.x+100, car.y);
     ctx.fillText(`x: ${car.x} y: ${car.y+100}`, car.x, car.y+100);
-    ctx.fillText(`x: ${car.x+100} y: ${car.y+100}`, car.x+100, car.y+100);
+    ctx.fillText(`x: ${car.x-100} y: ${car.y-100}`, car.x+100, car.y+100);
 }
 
 function checkupdates(){
@@ -94,7 +94,7 @@ function checkupdates(){
         car.y ++
     }
     if(car.LEFT){
-        car.x -= 1-friction
+        car.x --
     }
     if(car.RIGHT){
         car.x ++
