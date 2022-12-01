@@ -88,13 +88,13 @@ function checkupdates(){
         car.y *= 1-friction
     }
     if(car.DOWN){
-        car.y *= 1-friction
+        car.y *= 1+friction
     }
     if(car.LEFT){
         car.x *= 1-friction
     }
     if(car.RIGHT){
-        car.x *= 1-friction
+        car.x *= 1+friction
     }
 }
 
