@@ -24,7 +24,7 @@ resize()
 
 // inital setup for the player
 let car = {
-    x: canvas.width/2,
+    x: Math.floor(Math.random() * canvas.width-50) + 50,
     y: canvas.height/2,
 
     velocity_x: 0,
