@@ -31,7 +31,8 @@ let car = {
     LEFT: false,
     RIGHT: false,
     UP: false,
-    DOWN: false
+    DOWN: false,
+
 }
 
 function resetCanvasSize(e){
@@ -117,9 +118,9 @@ function checkupdates(){
     car.x += car.velocity_x
     car.y += car.velocity_y
 
-    if(!car.UP){
+    if(car.UP === false){
         if(momentum_y < 0){
-            momentum_y += 0.5
+            momentum_y += 0.1
             console.log('stopping going up')
         }
     }
