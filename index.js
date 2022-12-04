@@ -177,7 +177,7 @@ function checkupdates(){
         car.momentum_y += 1
     }
 
-    if(car.y > canvas,height){
+    if(car.y > canvas.height){
         car.momentum_y -= 1
     }
 
