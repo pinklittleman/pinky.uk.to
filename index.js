@@ -1,4 +1,5 @@
-let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,acceleration
+let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum
+
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
@@ -22,7 +23,7 @@ let car = {
     velocity_x: 0,
     velocity_y: 0,
 
-    acceleration: 1,
+    momentum: 0,
 
     LEFT: false,
     RIGHT: false,
@@ -80,7 +81,9 @@ function draw(){
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "#302A3B";
-    ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+50);
+    ctx.fillText(`x: ${car.x+50} y: ${car.y+10}`, car.x+10, car.y+50);
+    ctx.fillText(`${car.velocity_x}`)
+
 }
 
 function checkupdates(){
@@ -95,6 +98,9 @@ function checkupdates(){
     }
     if(car.RIGHT){
         car.x ++
+    }
+    if(car.UP || car.DOWN || car.LEFT || car.RIGHT){
+
     }
 }
 
