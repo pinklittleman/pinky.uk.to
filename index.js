@@ -87,7 +87,8 @@ function draw(){
     ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+10);
     ctx.fillText(`vel-x: ${car.velocity_x}  vel-y: ${car.velocity_y}`, car.x+10, car.y+20)
     ctx.fillText(`m_x: ${car.momentum_x} m_y: ${car.momentum_y}`, car.x+10, car.y+30)
-    ctx.fillText(`fps: ${fps}`, car.x+10, car.y+40)
+    ctx.fillStyle = "green";
+    ctx.fillText(`fps: ${fps}`, 10, 10)
 
 }
 
