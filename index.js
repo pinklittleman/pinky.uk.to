@@ -48,7 +48,7 @@ class Car2 {
         this.velocity_x = 0,
         this.velocity_y = 0,
         this.momentum_x = 0,
-        this.momentum_y = 0
+        this.momentum_y = 0,
         players.push(this)
 
     }
@@ -60,86 +60,71 @@ class Car2 {
         ctx.fillText(`vel-x: ${this.velocity_x.toFixed(3)}  vel-y: ${this.velocity_y.toFixed(3)}`, this.x+10, this.y+20)
         ctx.fillText(`m_x: ${this.momentum_x.toFixed(3)} m_y: ${this.momentum_y.toFixed(3)}`, this.x+10, this.y+30)
     }
-    checkupdates(){
-        // increments or decrements the momentum for each x and y
-        if(car.UP){
-            car.momentum_y -= 0.5
-        }
-        if(car.DOWN){
-            car.momentum_y += 0.5
-        }
-        if(car.LEFT){
-            car.momentum_x -= 0.5
-        }
-        if(car.RIGHT){
-            car.momentum_x += 0.5
-        }
-    
+    checkupdates(){ 
         // makes a new velocity value by multiplying the momentum to the friction minus 1
-        car.velocity_x = car.momentum_x * 1-friction
-        car.velocity_y = car.momentum_y * 1-friction
+        this.velocity_x = this.momentum_x * 1-friction
+        this.velocity_y = this.momentum_y * 1-friction
     
         // makes sure the player won't move when movement buttons aren't pressed otherwise the player will "drift"
-        if(car.momentum_x === 0 && car.momentum_y === 0){
-            car.velocity_x = 0
-            car.velocity_y = 0
+        if(this.momentum_x === 0 && this.momentum_y === 0){
+            this.velocity_x = 0
+            this.velocity_y = 0
         }
     
         // adds the "velocity" to the x and y cordinates
-        car.x += car.velocity_x
-        car.y += car.velocity_y
+        this.x += this.velocity_x
+        this.y += this.velocity_y
     
     
         // checks that the player isn't pressing any movement buttons then slows down using friction for smoothness. Once the momentum is low enough it will just stop and set to 0
-        if(car.UP === false){
-            if(car.momentum_y < 0){
-                car.momentum_y *= 1-friction
-                if((car.momentum_y.toFixed(3)) >= 0.000){
-                    car.momentum_y = 0                
-                }      
-            }
-        }
-        if(car.DOWN === false){
-            if(car.momentum_y > 0){
-                car.momentum_y *= 1-friction
-                if((car.momentum_y.toFixed(3)) <= 0.000){
-                    car.momentum_y = 0                
-                }      
-            }
-        }
-        if(car.LEFT === false){
-            if(car.momentum_x < 0){
-                car.momentum_x *= 1-friction
-                if((car.momentum_x.toFixed(3)) >= 0.000){
-                    car.momentum_x = 0                
-                }      
-            }
-        }
-        if(car.RIGHT === false){
-            if(car.momentum_x > 0){
-                car.momentum_x *= 1-friction
-                if((car.momentum_x.toFixed(3)) <= 0.000){
-                    car.momentum_x = 0                
-                }      
-            }
+        
+        if(this.momentum_y < 0){
+            this.momentum_y *= 1-friction
+            if((this.momentum_y.toFixed(3)) >= 0.000){
+                this.momentum_y = 0                
+            }      
         }
         
-        if(car.y < 0){
-            car.momentum_y = 0
-            car.momentum_y = 1
+
+        if(this.momentum_y > 0){
+            this.momentum_y *= 1-friction
+            if((this.momentum_y.toFixed(3)) <= 0.000){
+                this.momentum_y = 0                
+            }      
         }
-        if(car.y+100 > canvas.height){
-            car.momentum_y = 0
-            car.momentum_y = -1
+        
+        
+        if(this.momentum_x < 0){
+            this.momentum_x *= 1-friction
+            if((this.momentum_x.toFixed(3)) >= 0.000){
+                this.momentum_x = 0                
+            }      
+        }
+        
+      
+        if(this.momentum_x > 0){
+            this.momentum_x *= 1-friction
+            if((this.momentum_x.toFixed(3)) <= 0.000){
+                this.momentum_x = 0                
+            }      
+        }
+        
+        if(this.y < 0){
+            this.momentum_y = 0
+            this.momentum_y = 1
+        }
+        if(this.y+100 > canvas.height){
+            this.momentum_y = 0
+            this.momentum_y = -1
         }
     
-        if(car.x < 0){
-            car.momentum_x = 0
-            car.momentum_x = 1
+        if(this.x < 0){
+            this.momentum_x = 0
+            this.momentum_x = 1
         }
-        if(car.x+100 > canvas.width){
-            car.momentum_x = 0
-            car.momentum_x = -1
+        if(this.x+100 > canvas.width){
+            this.momentum_x = 0
+            this.momentum_x = -1
         }
     
     
