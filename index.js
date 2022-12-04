@@ -145,7 +145,7 @@ function checkupdates(){
     }
     if(car.LEFT === false){
         if(car.momentum_x < 0){
-            car.momentum_x *= friction
+            car.momentum_x *= 1-friction
             if((car.momentum_x.toFixed(3)) >= 0.000){
                 car.momentum_x = 0                
             }      
@@ -153,7 +153,7 @@ function checkupdates(){
     }
     if(car.RIGHT === false){
         if(car.momentum_x > 0){
-            car.momentum_x *= friction
+            car.momentum_x *= 1-friction
             if((car.momentum_x.toFixed(3)) <= 0.000){
                 car.momentum_x = 0                
             }      
