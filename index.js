@@ -118,8 +118,13 @@ function checkupdates(){
     car.y += car.velocity_y
 
     if(!car.UP){
-        if(momentum_y != 0){
-            momentum_y += friction
+        if(momentum_y < 0){
+            momentum_y += 0.5
+        }
+    }
+    if(!car.DOWN){
+        if(momentum_y > 0){
+            momentum_y -= 0.5
         }
     }
 
