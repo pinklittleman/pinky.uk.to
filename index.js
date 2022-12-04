@@ -101,7 +101,7 @@ function checkupdates(){
     if(car.RIGHT){
         car.x ++
     }
-    if(car.UP || car.DOWN || car.LEFT || car.RIGHT){
+    if(!car.UP || !car.DOWN || !car.LEFT || !car.RIGHT){
         if(momentum != 0){
             momentum -= 0.05
         }
