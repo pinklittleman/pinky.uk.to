@@ -120,8 +120,11 @@ function checkupdates(){
 
     if(car.UP === false){
         if(car.momentum_y < 0){
-            console.log('stopping going up')
             car.momentum_y += 0.1
+            if(car.momentum_y < 0.01){
+                car.momentum_y = 0
+            }
+            
         }
     }
 }
