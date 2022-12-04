@@ -121,7 +121,11 @@ function checkupdates(){
     if(car.UP === false){
         if(car.momentum_y < 0){
             car.momentum_y += 0.005
-            console.log(car.momentum_y.toFixed(2))
+            if(car.momentum_y.toFixed(2) === 0.00){
+                setTimeout(() => {
+                    car.momentum_y = 0
+                }, 500);
+            }
             
         }
     }
