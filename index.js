@@ -176,14 +176,14 @@ function checkupdates(){
     if(car.y < 50){
         car.momentum_y += 1
     }
-    if(car.y > canvas.height){
+    if(car.y+100 > canvas.height){
         car.momentum_y -= 1
     }
 
     if(car.x < 0){
         car.momentum_x += 1
     }
-    if(car.x > canvas.width){
+    if(car.x+100 > canvas.width){
         car.momentum_x -= 1
     }
 
