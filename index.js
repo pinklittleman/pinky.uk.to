@@ -1,5 +1,5 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
-let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum_x,momentum_y;
+let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum_x,momentum_y,count = 0;
 let players = []
 let sockets = []
 let canvas = document.getElementById('canvas')
@@ -295,7 +295,6 @@ function help(data){
     console.log('new user')
     sockets = data
     let leng = sockets.length
-    let count = 0
     sockets.forEach(sock => {
         if(sock != socket.id){
             if(count < leng){
