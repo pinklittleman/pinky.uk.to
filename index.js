@@ -48,7 +48,101 @@ class Car2 {
         this.velocity_y = 0,
         this.momentum_x = 0,
         this.momentum_y = 0
+        players.push(this)
 
+    }
+    draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.fillStyle = "#FF5733";
+        ctx.fillRect(car.x, car.y, 100, 100);
+        ctx.fillStyle = "#302A3B";
+        ctx.fillText(`x: ${car.x.toFixed(3)} y: ${car.y.toFixed(3)}`, car.x+10, car.y+10);
+        ctx.fillText(`vel-x: ${car.velocity_x.toFixed(3)}  vel-y: ${car.velocity_y.toFixed(3)}`, car.x+10, car.y+20)
+        ctx.fillText(`m_x: ${car.momentum_x.toFixed(3)} m_y: ${car.momentum_y.toFixed(3)}`, car.x+10, car.y+30)
+    }
+    checkupdates(){
+        // increments or decrements the momentum for each x and y
+        if(car.UP){
+            car.momentum_y -= 0.5
+        }
+        if(car.DOWN){
+            car.momentum_y += 0.5
+        }
+        if(car.LEFT){
+            car.momentum_x -= 0.5
+        }
+        if(car.RIGHT){
+            car.momentum_x += 0.5
+        }
+    
+        // makes a new velocity value by multiplying the momentum to the friction minus 1
+        car.velocity_x = car.momentum_x * 1-friction
+        car.velocity_y = car.momentum_y * 1-friction
+    
+        // makes sure the player won't move when movement buttons aren't pressed otherwise the player will "drift"
+        if(car.momentum_x === 0 && car.momentum_y === 0){
+            car.velocity_x = 0
+            car.velocity_y = 0
+        }
+    
+        // adds the "velocity" to the x and y cordinates
+        car.x += car.velocity_x
+        car.y += car.velocity_y
+    
+    
+        // checks that the player isn't pressing any movement buttons then slows down using friction for smoothness. Once the momentum is low enough it will just stop and set to 0
+        if(car.UP === false){
+            if(car.momentum_y < 0){
+                car.momentum_y *= 1-friction
+                if((car.momentum_y.toFixed(3)) >= 0.000){
+                    car.momentum_y = 0                
+                }      
+            }
+        }
+        if(car.DOWN === false){
+            if(car.momentum_y > 0){
+                car.momentum_y *= 1-friction
+                if((car.momentum_y.toFixed(3)) <= 0.000){
+                    car.momentum_y = 0                
+                }      
+            }
+        }
+        if(car.LEFT === false){
+            if(car.momentum_x < 0){
+                car.momentum_x *= 1-friction
+                if((car.momentum_x.toFixed(3)) >= 0.000){
+                    car.momentum_x = 0                
+                }      
+            }
+        }
+        if(car.RIGHT === false){
+            if(car.momentum_x > 0){
+                car.momentum_x *= 1-friction
+                if((car.momentum_x.toFixed(3)) <= 0.000){
+                    car.momentum_x = 0                
+                }      
+            }
+        }
+        
+        if(car.y < 0){
+            car.momentum_y = 0
+            car.momentum_y = 1
+        }
+        if(car.y+100 > canvas.height){
+            car.momentum_y = 0
+            car.momentum_y = -1
+        }
+    
+        if(car.x < 0){
+            car.momentum_x = 0
+            car.momentum_x = 1
+        }
+        if(car.x+100 > canvas.width){
+            car.momentum_x = 0
+            car.momentum_x = -1
+        }
+    
+    
     }
 }
 function resetCanvasSize(e){
@@ -216,8 +310,15 @@ function gameloop(){
     draw()
     checkupdates()
 
+    players.forEach(player => {
+        player.draw()
+        player.checkupdates()
+    });
+
     requestAnimationFrame(gameloop)
 }
+
+newsquare = new Car2(100,200)
 
 document.addEventListener('keyup', keyboardUp)
 document.addEventListener('keydown', keyboardDown)
