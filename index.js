@@ -129,7 +129,7 @@ function checkupdates(){
 
     if(car.UP === false){
         if(car.momentum_y < 0){
-            car.momentum_y += 0.02
+            car.momentum_y += 0.5
             if((car.momentum_y.toFixed(3)) >= 0.000){
                 car.momentum_y = 0                
             }      
@@ -137,7 +137,7 @@ function checkupdates(){
     }
     if(car.DOWN === false){
         if(car.momentum_y > 0){
-            car.momentum_y -= 0.02
+            car.momentum_y -= 0.5
             if((car.momentum_y.toFixed(3)) <= 0.000){
                 car.momentum_y = 0                
             }      
@@ -145,7 +145,7 @@ function checkupdates(){
     }
     if(car.LEFT === false){
         if(car.momentum_x < 0){
-            car.momentum_x += 0.02
+            car.momentum_x += 0.5
             if((car.momentum_x.toFixed(3)) >= 0.000){
                 car.momentum_x = 0                
             }      
@@ -153,7 +153,7 @@ function checkupdates(){
     }
     if(car.RIGHT === false){
         if(car.momentum_x > 0){
-            car.momentum_x -= 0.02
+            car.momentum_x -= 0.5
             if((car.momentum_x.toFixed(3)) <= 0.000){
                 car.momentum_x = 0                
             }      
