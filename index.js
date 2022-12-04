@@ -84,8 +84,9 @@ function draw(){
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "#302A3B";
     ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+10);
-    ctx.fillText(`x: ${car.velocity_x}  y:${car.velocity_y}`, car.x+10, car.y+20)
+    ctx.fillText(`vel-x: ${car.velocity_x}  vel-y:${car.velocity_y}`, car.x+10, car.y+20)
     ctx.fillText(`momentum: ${car.momentum}`, car.x+10, car.y+30)
+    ctx.fillText(`fps: ${fps}`, car.x+10, car.y+40)
 
 }
 
