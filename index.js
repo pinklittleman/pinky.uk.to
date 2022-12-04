@@ -294,9 +294,15 @@ socket.on('newusr', help)
 function help(data){
     console.log('new user')
     sockets = data
+    let leng = sockets.length
+    let count = 0
     sockets.forEach(sock => {
         if(sock != socket.id){
-            sock = new Car2(200,200)
+            if(count < leng){
+                sock = new Car2(200,200)
+                count++
+            }
+            
         }
     });
 }
