@@ -4,11 +4,13 @@ let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
 
+// inital setup for fps counter
 let be = Date.now(),fps=0,info='';
 
 canvas.height = innerHeight
 canvas.width = innerWidth
 
+// sets the canvas size to new screen size if the window is resized
 var resize = function() {
     width = window.innerWidth
     height = window.innerHeight
@@ -18,6 +20,7 @@ var resize = function() {
 window.onresize = resize
 resize()
 
+// inital setup for the player
 let car = {
     x: canvas.width/2,
     y: canvas.height/2,
@@ -41,6 +44,7 @@ function resetCanvasSize(e){
 }
 
 function keyboardDown(e) {
+    // sets the direction of movement for the later steps
     if(e.key === "w"){
         car.UP = true
         car.Moving = true
@@ -59,6 +63,7 @@ function keyboardDown(e) {
     }
 }
 function keyboardUp(e) {
+    // sets the movement to false if the player removes finger from the keyboard
     if(e.key === "w"){
         car.UP = false
         car.Moving = false
@@ -91,6 +96,8 @@ function draw(){
 
     // ctx.closePath()
     // ctx.stroke()
+
+    // makes the player visable on the screen
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "#302A3B";
@@ -103,6 +110,7 @@ function draw(){
 }
 
 function checkupdates(){
+    // increments or decrements the momentum for each x and y
     if(car.UP){
         car.momentum_y -= 1
     }
@@ -116,17 +124,22 @@ function checkupdates(){
         car.momentum_x += 1
     }
 
+    // makes a new velocity value by multiplying the momentum to the friction minus 1
     car.velocity_x = car.momentum_x * 1-friction
     car.velocity_y = car.momentum_y * 1-friction
 
+    // makes sure the player won't move when movement buttons aren't pressed otherwise the player will "drift"
     if(car.momentum_x === 0 && car.momentum_y === 0){
         car.velocity_x = 0
         car.velocity_y = 0
     }
 
+    // adds the "velocity" to the x and y cordinates
     car.x += car.velocity_x
     car.y += car.velocity_y
 
+
+    // checks that the player isn't pressing any movement buttons then slows down using friction for smoothness. Once the momentum is low enough it will just stop and set to 0
     if(car.UP === false){
         if(car.momentum_y < 0){
             car.momentum_y *= 1-friction
@@ -160,9 +173,15 @@ function checkupdates(){
         }
     }
     
+    if(car.y < 50){
+        car.momentum_y += 1
+    }
+
 }
 
+// main game loop that gets called on the new frame by the requestAnimationFrame function 
 function gameloop(){
+    // calls for the new framerate and other functions 
     let now = Date.now()
     fps = Math.round(1000 / (now - be))
     be = now
