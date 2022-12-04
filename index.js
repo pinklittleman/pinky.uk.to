@@ -109,8 +109,6 @@ function checkupdates(){
     car.velocity_x = friction * momentum_x
     car.velocity_y = friction * momentum_y
 
-    car.x += car.velocity_x
-    car.y += car.velocity_y
 }
 
 function gameloop(){
