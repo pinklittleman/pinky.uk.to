@@ -117,6 +117,12 @@ function checkupdates(){
     car.x += car.velocity_x
     car.y += car.velocity_y
 
+    if(!car.UP){
+        if(momentum_y != 0){
+            momentum_y += friction
+        }
+    }
+
 }
 
 function gameloop(){
