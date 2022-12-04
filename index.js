@@ -1,6 +1,7 @@
 const socket = io.connect('wss://pinky.uk.to:5000');
 let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum_x,momentum_y;
 let players = []
+let socekts = []
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
@@ -307,10 +308,12 @@ function gameloop(){
 socket.on('newusr', help)
 function help(data){
     console.log('new user')
-    if(data != socket.id){
-        console.log('newusr2')
-        data = new Car2(100,200)
-    }
+    socekts.push(data)
+    sockets.forEach(sock => {
+        if(sock != socket.id){
+            sock = new Car2(200,200)
+        }
+    });
 }
 
 document.addEventListener('keyup', keyboardUp)
