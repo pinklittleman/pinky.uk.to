@@ -1,3 +1,4 @@
+var fs = require('fs');
 var app = require('express')();
 // read ssl certificate
 var privateKey = fs.readFileSync('/home/pink/ssl-cert/privkey.pem', 'utf8');
