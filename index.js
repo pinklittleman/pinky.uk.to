@@ -1,5 +1,6 @@
+const socket = io.connect('wss://pinky.uk.to:5000');
 let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum_x,momentum_y;
-
+let players = []
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
@@ -39,6 +40,17 @@ let car = {
 
 }
 
+class Car2 {
+    constructor(x,y){
+        this.x = x,
+        this.y = y,
+        this.velocity_x = 0,
+        this.velocity_y = 0,
+        this.momentum_x = 0,
+        this.momentum_y = 0
+
+    }
+}
 function resetCanvasSize(e){
     console.log(e)
 }
