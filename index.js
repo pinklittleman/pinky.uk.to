@@ -177,6 +177,11 @@ function checkupdates(){
         car.momentum_y += 1
     }
 
+    if(car.y > canvas,height){
+        car.momentum_y -= 1
+    }
+
+
 }
 
 // main game loop that gets called on the new frame by the requestAnimationFrame function 
