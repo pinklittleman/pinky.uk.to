@@ -31,7 +31,7 @@ let car = {
     LEFT: false,
     RIGHT: false,
     UP: false,
-    DOWN: false,
+    DOWN: false
 
 }
 
@@ -124,12 +124,6 @@ function checkupdates(){
             console.log('stopping going up')
         }
     }
-    if(!car.DOWN){
-        if(momentum_y > 0){
-            momentum_y -= 0.5
-        }
-    }
-
 }
 
 function gameloop(){
