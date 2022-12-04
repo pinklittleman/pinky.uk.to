@@ -88,7 +88,7 @@ function draw(){
     ctx.fillText(`vel-x: ${car.velocity_x}  vel-y: ${car.velocity_y}`, car.x+10, car.y+20)
     ctx.fillText(`m_x: ${car.momentum_x} m_y: ${car.momentum_y}`, car.x+10, car.y+30)
     ctx.fillStyle = "green";
-    ctx.fillText(`fps: ${fps}`, 10, 10)
+    ctx.fillText(`FPS: ${fps}`, 10, 10)
 
 }
 
@@ -106,8 +106,8 @@ function checkupdates(){
         car.momentum_x += 1
     }
 
-    car.velocity_x *= friction
-    car.velocity_y *= friction
+    car.velocity_x = friction * momentum_x
+    car.velocity_y = friction * momentum_y
 
     car.x += car.velocity_x
     car.y += car.velocity_y
