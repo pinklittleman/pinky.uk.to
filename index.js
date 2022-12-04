@@ -105,8 +105,8 @@ function checkupdates(){
         car.momentum_x += 1
     }
 
-    car.velocity_x += 1-friction
-    car.velocity_y += 1-friction
+    car.velocity_x *= friction
+    car.velocity_y *= friction
 
     car.x += car.velocity_x
     car.y += car.velocity_y
