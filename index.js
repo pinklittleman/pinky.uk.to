@@ -120,6 +120,7 @@ function checkupdates(){
     if(!car.UP){
         if(momentum_y < 0){
             momentum_y += 0.5
+            console.log('stopping going up')
         }
     }
     if(!car.DOWN){
