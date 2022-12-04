@@ -4,6 +4,8 @@ let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
 
+let be = Date.now(),fps=0,info='';
+
 canvas.height = innerHeight
 canvas.width = innerWidth
 
@@ -100,11 +102,17 @@ function checkupdates(){
         car.x ++
     }
     if(car.UP || car.DOWN || car.LEFT || car.RIGHT){
-
+        if(momentum != 0){
+            momentum -= 0.05
+        }
     }
 }
 
 function gameloop(){
+    let now = Date.now()
+    fps = Math.round(1000 / (now - be))
+    be = now
+
     draw()
     checkupdates()
 
