@@ -138,7 +138,7 @@ function checkupdates(){
     if(car.DOWN === false){
         if(car.momentum_y > 0){
             car.momentum_y -= 0.02
-            if((car.momentum_y.toFixed(3)) >= 0.000){
+            if((car.momentum_y.toFixed(3)) <= 0.000){
                 car.momentum_y = 0                
             }      
         }
