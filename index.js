@@ -306,8 +306,9 @@ function gameloop(){
 
 socket.on('newusr', help)
 function help(data){
+    console.log('new user')
     if(data != socket.id){
-        console.log('newusr')
+        console.log('newusr2')
         data = new Car2(100,200)
     }
 }
