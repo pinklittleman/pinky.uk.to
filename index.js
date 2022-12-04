@@ -1,4 +1,4 @@
-let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum
+let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum;
 
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
@@ -85,6 +85,7 @@ function draw(){
     ctx.fillStyle = "#302A3B";
     ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+10);
     ctx.fillText(`x: ${car.velocity_x}  y:${car.velocity_y}`, car.x+10, car.y+20)
+    ctx.fillText(`momentum: ${car.momentum}`, car.x+10, car.y+30)
 
 }
 
