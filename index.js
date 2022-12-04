@@ -1,4 +1,4 @@
-let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum;
+let LEFT,RIGHT,UP,DOWN,velocity_x,velocity_y,x,y,width,height,momentum_x,momentum_y;
 
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
@@ -25,7 +25,8 @@ let car = {
     velocity_x: 0,
     velocity_y: 0,
 
-    momentum: 0,
+    momentum_x: 0,
+    momentum_y: 0,
 
     LEFT: false,
     RIGHT: false,
@@ -92,21 +93,16 @@ function draw(){
 
 function checkupdates(){
     if(car.UP){
-        car.y --
+        car.momentum_y -= 1
     }
     if(car.DOWN){
-        car.y ++
+        car.momentum_y += 1
     }
     if(car.LEFT){
-        car.x --
+        car.momentum_x -= 1
     }
     if(car.RIGHT){
-        car.x ++
-    }
-    if(!car.UP || !car.DOWN || !car.LEFT || !car.RIGHT){
-        if(car.momentum != 0){
-            car.momentum -= 0.05
-        }
+        car.momentum_x += 1
     }
 }
 
