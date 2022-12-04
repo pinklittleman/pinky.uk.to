@@ -52,7 +52,6 @@ class Car2 {
 
     }
     draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.fillStyle = "#FF5733";
         ctx.fillRect(this.x, this.y, 100, 100);
         ctx.fillStyle = "#302A3B";
@@ -189,20 +188,6 @@ function keyboardUp(e) {
 }
 
 function draw(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-    // ctx.translate(car.x, car.y)
-    // ctx.beginPath()
-
-    // ctx.moveTo(0, 0)
-    // ctx.lineTo(10, 10)
-    // ctx.lineTo(0, -20)
-    // ctx.lineTo(-10, 10)
-    // ctx.lineTo(0, 0)
-
-    // ctx.closePath()
-    // ctx.stroke()
-
     // makes the player visable on the screen
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
@@ -302,6 +287,7 @@ function checkupdates(){
 
 // main game loop that gets called on the new frame by the requestAnimationFrame function 
 function gameloop(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     // calls for the new framerate and other functions 
     let now = Date.now()
     fps = Math.round(1000 / (now - be))
