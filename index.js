@@ -119,9 +119,9 @@ function checkupdates(){
     car.y += car.velocity_y
 
     if(car.UP === false){
-        if(momentum_y < 0){
+        if(car.momentum_y < 0){
             console.log('stopping going up')
-            momentum_y += 0.1
+            car.momentum_y += 0.1
         }
     }
 }
