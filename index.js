@@ -81,7 +81,7 @@ function draw(){
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "#302A3B";
-    ctx.fillText(`x: ${car.x+50} y: ${car.y+10}`, car.x+10, car.y+50);
+    ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+10);
     ctx.fillText(`${car.velocity_x}`)
 
 }
