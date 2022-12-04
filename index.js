@@ -173,19 +173,22 @@ function checkupdates(){
         }
     }
     
-    if(car.y < 10){
+    if(car.y < 0){
         car.momentum_y = 0
         car.momentum_y = 1
     }
     if(car.y+100 > canvas.height){
-        car.momentum_y -= 1
+        car.momentum_y = 0
+        car.momentum_y = -1
     }
 
     if(car.x < 0){
-        car.momentum_x += 1
+        car.momentum_x = 0
+        car.momentum_x = 1
     }
     if(car.x+100 > canvas.width){
-        car.momentum_x -= 1
+        car.momentum_x = 0
+        car.momentum_x = -1
     }
 
 
