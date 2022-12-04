@@ -130,15 +130,13 @@ function checkupdates(){
     if(car.UP === false){
         if(car.momentum_y < 0){
             car.momentum_y += 0.01
-            console.log(car.momentum_y.toFixed(3))            
+            if((car.momentum_y.toFixed(3)) >= 0.000){
+                console.log('stop')
+                car.momentum_y = 0                
+            }      
         }
     }
-    if((car.momentum_y.toFixed(3)) >= 0.000 && !car.Moving){
-        console.log('stop')
-        car.momentum_y = 0
-        car.velocity_y = 0
-        
-    }
+    
 }
 
 function gameloop(){
