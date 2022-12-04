@@ -121,7 +121,7 @@ function checkupdates(){
     if(car.UP === false){
         if(car.momentum_y < 0){
             car.momentum_y += 0.005
-            console.log(Math.floor(car.momentum_y))
+            console.log(car.momentum_y.toFixed(2))
             
         }
     }
