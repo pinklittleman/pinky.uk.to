@@ -153,7 +153,7 @@ function checkupdates(){
     }
     if(car.RIGHT === false){
         if(car.momentum_x > 0){
-            car.momentum_x += 0.02
+            car.momentum_x -= 0.02
             if((car.momentum_x.toFixed(3)) <= 0.000){
                 car.momentum_x = 0                
             }      
