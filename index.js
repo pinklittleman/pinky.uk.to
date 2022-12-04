@@ -125,6 +125,7 @@ function checkupdates(){
         }
     }
     if((car.momentum_y.toFixed(3)) === -0.000){
+        console.log('stop')
         car.momentum_y = 0
         car.velocity_y = 0
         
