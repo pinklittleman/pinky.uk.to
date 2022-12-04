@@ -184,7 +184,7 @@ function checkupdates(){
         car.momentum_x += 1
     }
     if(car.x > canvas.width){
-        car.momentum_x += 1
+        car.momentum_x -= 1
     }
 
 
