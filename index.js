@@ -143,6 +143,22 @@ function checkupdates(){
             }      
         }
     }
+    if(car.LEFT === false){
+        if(car.momentum_x < 0){
+            car.momentum_y += 0.02
+            if((car.momentum_y.toFixed(3)) >= 0.000){
+                car.momentum_y = 0                
+            }      
+        }
+    }
+    if(car.RIGHT === false){
+        if(car.momentum_x > 0){
+            car.momentum_y += 0.02
+            if((car.momentum_y.toFixed(3)) <= 0.000){
+                car.momentum_y = 0                
+            }      
+        }
+    }
     
 }
 
