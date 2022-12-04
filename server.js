@@ -26,7 +26,10 @@ io.on('connection', (socket) => {
     // log the user that has connected and their socketID
     console.log('a user connected: ' + socket.id);
     users.push(socket.id)
-    socket.emit('newusr', socket.id)
+
+    setInterval(() => {
+        socket.emit('newusr', users)
+    }, 1000);
 
 
     socket.on('disconnect', () => {

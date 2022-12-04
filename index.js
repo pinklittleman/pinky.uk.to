@@ -308,7 +308,7 @@ function gameloop(){
 socket.on('newusr', help)
 function help(data){
     console.log('new user')
-    sockets.push(data)
+    sockets = data
     sockets.forEach(sock => {
         if(sock != socket.id){
             sock = new Car2(200,200)
