@@ -79,7 +79,7 @@ function draw(){
     // ctx.stroke()
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "#302A3B";
     ctx.fillText(`x: ${car.x+50} y: ${car.y+50}`, car.x+10, car.y+50);
 }
 
