@@ -98,8 +98,6 @@ function draw(){
     // ctx.stroke()
 
     // makes the player visable on the screen
-    ctx.save()
-    ctx.rotate((Math.PI/180) * 2)
     ctx.fillStyle = "#FF5733";
     ctx.fillRect(car.x, car.y, 100, 100);
     ctx.fillStyle = "#302A3B";
@@ -108,7 +106,6 @@ function draw(){
     ctx.fillText(`m_x: ${car.momentum_x} m_y: ${car.momentum_y}`, car.x+10, car.y+30)
     ctx.fillStyle = "green";
     ctx.fillText(`FPS: ${fps}`, 10, 10)
-    ctx.restore()
 
 }
 
