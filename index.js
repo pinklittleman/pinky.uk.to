@@ -54,11 +54,11 @@ class Car2 {
     draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.fillStyle = "#FF5733";
-        ctx.fillRect(car.x, car.y, 100, 100);
+        ctx.fillRect(this.x, this.y, 100, 100);
         ctx.fillStyle = "#302A3B";
-        ctx.fillText(`x: ${car.x.toFixed(3)} y: ${car.y.toFixed(3)}`, car.x+10, car.y+10);
-        ctx.fillText(`vel-x: ${car.velocity_x.toFixed(3)}  vel-y: ${car.velocity_y.toFixed(3)}`, car.x+10, car.y+20)
-        ctx.fillText(`m_x: ${car.momentum_x.toFixed(3)} m_y: ${car.momentum_y.toFixed(3)}`, car.x+10, car.y+30)
+        ctx.fillText(`x: ${this.x.toFixed(3)} y: ${this.y.toFixed(3)}`, this.x+10, this.y+10);
+        ctx.fillText(`vel-x: ${this.velocity_x.toFixed(3)}  vel-y: ${this.velocity_y.toFixed(3)}`, this.x+10, this.y+20)
+        ctx.fillText(`m_x: ${this.momentum_x.toFixed(3)} m_y: ${this.momentum_y.toFixed(3)}`, this.x+10, this.y+30)
     }
     checkupdates(){
         // increments or decrements the momentum for each x and y
