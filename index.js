@@ -173,8 +173,8 @@ function checkupdates(){
         }
     }
     
-    if(car.y < 50){
-        car.momentum_y += 1
+    if(car.y < 10){
+        car.momentum_y = 0
     }
     if(car.y+100 > canvas.height){
         car.momentum_y -= 1
