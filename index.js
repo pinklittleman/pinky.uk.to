@@ -304,7 +304,13 @@ function gameloop(){
     requestAnimationFrame(gameloop)
 }
 
-newsquare = new Car2(100,200)
+socket.on('newusr', help)
+function help(data){
+    if(data != socket.id){
+        console.log('newusr')
+        data = new Car2(100,200)
+    }
+}
 
 document.addEventListener('keyup', keyboardUp)
 document.addEventListener('keydown', keyboardDown)
