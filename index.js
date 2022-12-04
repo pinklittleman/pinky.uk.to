@@ -112,16 +112,16 @@ function draw(){
 function checkupdates(){
     // increments or decrements the momentum for each x and y
     if(car.UP){
-        car.momentum_y -= 1
+        car.momentum_y -= 0.5
     }
     if(car.DOWN){
-        car.momentum_y += 1
+        car.momentum_y += 0.5
     }
     if(car.LEFT){
-        car.momentum_x -= 1
+        car.momentum_x -= 0.5
     }
     if(car.RIGHT){
-        car.momentum_x += 1
+        car.momentum_x += 0.5
     }
 
     // makes a new velocity value by multiplying the momentum to the friction minus 1
