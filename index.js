@@ -31,7 +31,8 @@ let car = {
     LEFT: false,
     RIGHT: false,
     UP: false,
-    DOWN: false
+    DOWN: false,
+    Moving: false
 
 }
 
@@ -42,29 +43,37 @@ function resetCanvasSize(e){
 function keyboardDown(e) {
     if(e.key === "w"){
         car.UP = true
+        car.Moving = true
     }
     if(e.key === "s"){
         car.DOWN = true
+        car.Moving = true
     }
     if(e.key === "a"){
         car.LEFT = true
+        car.Moving = true
     }
     if(e.key === "d"){
         car.RIGHT = true
+        car.Moving = true
     }
 }
 function keyboardUp(e) {
     if(e.key === "w"){
         car.UP = false
+        car.Moving = false
     }
     if(e.key === "s"){
         car.DOWN = false
+        car.Moving = false
     }
     if(e.key === "a"){
         car.LEFT = false
+        car.Moving = false
     }
     if(e.key === "d"){
         car.RIGHT = false
+        car.Moving = false
     }
 }
 
@@ -124,7 +133,7 @@ function checkupdates(){
             console.log(car.momentum_y.toFixed(3))            
         }
     }
-    if((car.momentum_y.toFixed(3)) >= 0.000){
+    if((car.momentum_y.toFixed(3)) >= 0.000 && !car.Moving){
         console.log('stop')
         car.momentum_y = 0
         car.velocity_y = 0
