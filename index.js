@@ -142,7 +142,7 @@ function checkupdates(){
     // checks that the player isn't pressing any movement buttons then slows down using friction for smoothness. Once the momentum is low enough it will just stop and set to 0
     if(car.UP === false){
         if(car.momentum_y < 0){
-            car.momentum_y *= 0.5-friction
+            car.momentum_y *= 1-friction
             if((car.momentum_y.toFixed(3)) >= 0.000){
                 car.momentum_y = 0                
             }      
@@ -150,7 +150,7 @@ function checkupdates(){
     }
     if(car.DOWN === false){
         if(car.momentum_y > 0){
-            car.momentum_y *= 0.5-friction
+            car.momentum_y *= 1-friction
             if((car.momentum_y.toFixed(3)) <= 0.000){
                 car.momentum_y = 0                
             }      
@@ -158,7 +158,7 @@ function checkupdates(){
     }
     if(car.LEFT === false){
         if(car.momentum_x < 0){
-            car.momentum_x *= 0.5-friction
+            car.momentum_x *= 1-friction
             if((car.momentum_x.toFixed(3)) >= 0.000){
                 car.momentum_x = 0                
             }      
@@ -166,7 +166,7 @@ function checkupdates(){
     }
     if(car.RIGHT === false){
         if(car.momentum_x > 0){
-            car.momentum_x *= 0.5-friction
+            car.momentum_x *= 1-friction
             if((car.momentum_x.toFixed(3)) <= 0.000){
                 car.momentum_x = 0                
             }      
