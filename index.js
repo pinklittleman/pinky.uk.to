@@ -109,6 +109,11 @@ function checkupdates(){
     car.velocity_x = car.momentum_x * 1-friction
     car.velocity_y = car.momentum_y * 1-friction
 
+    if(car.momentum_x && car.momentum_y === 0){
+        car.velocity_x = 0
+        car.velocity_y = 0
+    }
+
     car.x += car.velocity_x
     car.y += car.velocity_y
 
