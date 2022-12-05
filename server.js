@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
     socket.on('movement',movement)
 
     function movement(data){
-        socket.emit('newmov',data)
+        io.emit('newmov',data)
     }
 
 
