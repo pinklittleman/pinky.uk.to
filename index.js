@@ -290,32 +290,20 @@ function stop(){
 
 function helpme(data) {
     stopping = false
-    console.log(data)
-    if(data.ID != socket.id){
+    let otherplayers = data
+    if(otherplayers.ID != socket.id){
         players.forEach(player => {
-            while(data.UP){
+            if(otherplayers.UP){
                 player.momentum_y -= 0.5
-                if (stopping) {
-                    break
-                }
             }
-            while(data.DOWN){
+            if(otherplayers.DOWN){
                 player.momentum_y += 0.5
-                if (stopping) {
-                    break
-                }
             }
-            while(data.LEFT){
+            if(otherplayers.LEFT){
                 player.momentum_x -= 0.5
-                if (stopping) {
-                    break
-                }
             }
-            while(data.RIGHT){
+            if(otherplayers.RIGHT){
                 player.momentum_x += 0.5
-                if (stopping) {
-                    break
-                }
             }
         });
     }
