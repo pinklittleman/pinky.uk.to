@@ -285,17 +285,21 @@ function helpme(data) {
     console.log(data)
     if(data.ID != socket.id){
         players.forEach(player => {
-            if(data.UP){
+            while(data.UP){
                 player.momentum_y -= 0.5
+                break
             }
-            if(data.DOWN){
+            while(data.DOWN){
                 player.momentum_y += 0.5
+                break
             }
-            if(data.LEFT){
+            while(data.LEFT){
                 player.momentum_x -= 0.5
+                break
             }
-            if(data.RIGHT){
+            while(data.RIGHT){
                 player.momentum_x += 0.5
+                break
             }
         });
     }
