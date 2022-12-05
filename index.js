@@ -326,7 +326,7 @@ function help(data){
     let leng = sockets.length
     sockets.forEach(sock => {
         if(sock != socket.id){
-            if(count < leng){
+            if(count < leng-1){
                 new Car2(200,200)
                 count++
                 players.forEach(player => {
