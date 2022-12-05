@@ -323,6 +323,8 @@ function gameloop(){
 socket.on('newusr', help)
 function help(data){
     sockets = data
+    let pos = sockets.indexOf(socket.id)
+    sockets.splice(pos,pos+1)
     let leng = sockets.length
     sockets.forEach(sock => {
         if(sock != socket.id){
@@ -334,8 +336,8 @@ function help(data){
                     //     player["ID"] = sock
                     //     console.log(sock)
                     // }); 
-                    for(let i = 0; i < sockets.length; i++){
-                        player["ID"] = sockets[i+1]
+                    for(let i = 1; i < sockets.length; i++){
+                        player["ID"] = sockets[i]
                     }
                     player.momentum_x += Math.floor(Math.random() * 5) + 0.2
                 });
