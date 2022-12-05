@@ -330,7 +330,7 @@ function help(data){
                 new Car2(200,200)
                 count++
                 players.forEach(player => {
-                    player[ID] = sockets.forEach(sock => {
+                    player["ID"] = sockets.forEach(sock => {
                         return sock
                     });                
                     player.momentum_x += Math.floor(Math.random() * 5) + 0.2
