@@ -36,6 +36,11 @@ io.on('connection', (socket) => {
     function movement(data){
         io.emit('newmov',data)
     }
+    socket.on('movementstop',stop)
+
+    function stop(data){
+        io.emit('stoploop',data)
+    }
 
 
     socket.on('disconnect', () => {

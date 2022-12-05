@@ -279,27 +279,43 @@ function checkupdates(){
 
 }
 
+let stopping = false
+
 socket.on('newmov', helpme)
+socket.on('stoploop', stop)
+
+function stop(){
+    stopping = true
+}
 
 function helpme(data) {
+    stopping = false
     console.log(data)
     if(data.ID != socket.id){
         players.forEach(player => {
             while(data.UP){
                 player.momentum_y -= 0.5
-                break
+                if (stopping) {
+                    break
+                }
             }
             while(data.DOWN){
                 player.momentum_y += 0.5
-                break
+                if (stopping) {
+                    break
+                }
             }
             while(data.LEFT){
                 player.momentum_x -= 0.5
-                break
+                if (stopping) {
+                    break
+                }
             }
             while(data.RIGHT){
                 player.momentum_x += 0.5
-                break
+                if (stopping) {
+                    break
+                }
             }
         });
     }
