@@ -31,6 +31,12 @@ io.on('connection', (socket) => {
         socket.emit('newusr', users)
     }, 1000);
 
+    socket.on('movement',movement)
+
+    function movement(data){
+        console.log(data)
+    }
+
 
     socket.on('disconnect', () => {
 

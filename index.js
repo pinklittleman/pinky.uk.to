@@ -139,18 +139,22 @@ function keyboardDown(e) {
     if(e.key === "w"){
         car.UP = true
         car.Moving = true
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "s"){
         car.DOWN = true
         car.Moving = true
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "a"){
         car.LEFT = true
         car.Moving = true
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "d"){
         car.RIGHT = true
         car.Moving = true
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
 }
 function keyboardUp(e) {
@@ -269,6 +273,12 @@ function checkupdates(){
     }
 
 
+}
+
+socket.on('newmov', helpme)
+
+function helpme(data) {
+    console.log(data)
 }
 
 // main game loop that gets called on the new frame by the requestAnimationFrame function 
