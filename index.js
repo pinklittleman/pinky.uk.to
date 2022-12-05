@@ -162,18 +162,22 @@ function keyboardUp(e) {
     if(e.key === "w"){
         car.UP = false
         car.Moving = false
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "s"){
         car.DOWN = false
         car.Moving = false
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "a"){
         car.LEFT = false
         car.Moving = false
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
     if(e.key === "d"){
         car.RIGHT = false
         car.Moving = false
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
     }
 }
 
