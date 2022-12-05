@@ -139,22 +139,22 @@ function keyboardDown(e) {
     if(e.key === "w"){
         car.UP = true
         car.Moving = true
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "s"){
         car.DOWN = true
         car.Moving = true
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "a"){
         car.LEFT = true
         car.Moving = true
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "d"){
         car.RIGHT = true
         car.Moving = true
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
 }
 function keyboardUp(e) {
@@ -162,22 +162,22 @@ function keyboardUp(e) {
     if(e.key === "w"){
         car.UP = false
         car.Moving = false
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movementstop', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "s"){
         car.DOWN = false
         car.Moving = false
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movementstop', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "a"){
         car.LEFT = false
         car.Moving = false
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movementstop', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
     if(e.key === "d"){
         car.RIGHT = false
         car.Moving = false
-        socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN})
+        socket.emit('movementstop', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
     }
 }
 
