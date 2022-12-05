@@ -283,6 +283,22 @@ socket.on('newmov', helpme)
 
 function helpme(data) {
     console.log(data)
+    if(data.ID != socket.id){
+        players.forEach(player => {
+            if(data.UP){
+                player.momentum_y -= 0.5
+            }
+            if(data.DOWN){
+                player.momentum_y += 0.5
+            }
+            if(data.LEFT){
+                player.momentum_x -= 0.5
+            }
+            if(data.RIGHT){
+                player.momentum_x += 0.5
+            }
+        });
+    }
 }
 
 // main game loop that gets called on the new frame by the requestAnimationFrame function 
@@ -306,14 +322,16 @@ function gameloop(){
 
 socket.on('newusr', help)
 function help(data){
-    console.log('new user')
     sockets = data
     let leng = sockets.length
     sockets.forEach(sock => {
         if(sock != socket.id){
             if(count < leng){
-                sock = new Car2(200,200)
+                new Car2(200,200)
                 count++
+                players.forEach(player => {
+                    player.momentum_x += Math.floor(Math.random() * 5) + 0.2
+                });
             }
             
         }
