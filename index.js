@@ -276,20 +276,22 @@ function checkupdates(){
         car.momentum_x = -1
     }
 
-    players.forEach(player => {
-        if(otherplayers.UP){
-            player.momentum_y -= 0.5
-        }
-        if(otherplayers.DOWN){
-            player.momentum_y += 0.5
-        }
-        if(otherplayers.LEFT){
-            player.momentum_x -= 0.5
-        }
-        if(otherplayers.RIGHT){
-            player.momentum_x += 0.5
-        }
-    });
+    if(otherplayers.ID != socket.id){
+        players.forEach(player => {
+            if(otherplayers.UP){
+                player.momentum_y -= 0.5
+            }
+            if(otherplayers.DOWN){
+                player.momentum_y += 0.5
+            }
+            if(otherplayers.LEFT){
+                player.momentum_x -= 0.5
+            }
+            if(otherplayers.RIGHT){
+                player.momentum_x += 0.5
+            }
+        });
+    }
 
 
 }
