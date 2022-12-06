@@ -371,6 +371,8 @@ function help(data){
     });
 }
 
+socket.emit('movement', {ID:socket.id, LEFT:car.LEFT , RIGHT:car.RIGHT , UP:car.UP , DOWN:car.DOWN, x:car.x, y:car.y})
+
 document.addEventListener('keyup', keyboardUp)
 document.addEventListener('keydown', keyboardDown)
 
