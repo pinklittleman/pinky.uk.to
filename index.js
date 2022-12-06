@@ -6,7 +6,7 @@ let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext("2d")
 let friction = 0.04
 
-otherplayers = {LEFT:false , RIGHT:false , UP:false , DOWN:false}
+otherplayers = {LEFT:false , RIGHT:false , UP:false , DOWN:false, x: 200, y:200}
 
 // inital setup for fps counter
 let be = Date.now(),fps=0,info='';
