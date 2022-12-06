@@ -295,11 +295,12 @@ function checkupdates(){
         });
     }
 
-    players.forEach(player => {
-        player.x = otherplayers.x
-        player.y = otherplayers.y
-
-    })
+    if(otherplayers.ID != socket.id){
+        players.forEach(player => {
+            player.x = otherplayers.x
+            player.y = otherplayers.y
+        })
+    }
 
 
 }
