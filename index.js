@@ -295,20 +295,20 @@ function checkupdates(){
         });
     }
 
+    players.forEach(player => {
+        player.x = otherplayers.x
+        player.y = otherplayers.y
+
+    })
+
 
 }
 
 let stopping = false
 
 socket.on('newmov', helpme)
-socket.on('stoploop', stop)
-
-function stop(){
-    stopping = true
-}
 
 function helpme(data) {
-    stopping = false
     otherplayers = data
     // if(otherplayers.ID != socket.id){
         // players.forEach(player => {
