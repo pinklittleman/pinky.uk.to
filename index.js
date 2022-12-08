@@ -144,8 +144,7 @@ class Car2 {
                     this.momentum_x += 0.5
                 }
             // });
-        }
-    
+        }    
     
     }
 }
