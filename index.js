@@ -129,7 +129,7 @@ class Car2 {
             this.momentum_x = -1
         }
 
-        // if(otherplayers.ID != socket.id){
+        if(otherplayers.ID != socket.id){
         //     players.forEach(player => {
                 if(otherplayers.UP){
                     this.momentum_y -= 0.5
@@ -144,7 +144,7 @@ class Car2 {
                     this.momentum_x += 0.5
                 }
             // });
-        // }
+        }
     
     
     }
