@@ -22,15 +22,7 @@ form.addEventListener('submit', (event) => {
 
   // Send the message to the server when the WebSocket is open
   socket.onopen = () => {
-    const blob = new Blob([messageInput.value]);
 
-    // Use the FileReader API to read the data from the Blob
-    const reader = new FileReader();
-    reader.readAsText(blob, 'utf-8');
-    reader.onloadend = () => {
-      const data = reader.result;
-      console.log(data); // This will log the data from the Blob to the console
-      socket.send(data);
     };
   };
 
