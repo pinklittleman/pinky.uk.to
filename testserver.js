@@ -15,7 +15,7 @@ wss.on('connection', (ws) => {
         if (client !== ws && client.readyState === WebSocket.OPEN) {
           client.send(message);
         }
-      });
+      });   
   });
 });
 
