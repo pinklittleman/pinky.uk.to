@@ -50,6 +50,9 @@
       </form>
     </div>
     <script>
+      // Create a WebSocket connection to the server
+      const socket = new WebSocket("ws://localhost:8080");
+
       // Get references to the chat container and form elements
       const chatContainer = document.querySelector(".chat-container");
       const chatForm = document.querySelector(".chat-form");
@@ -65,17 +68,23 @@
         // Clear the input field
         chatInput.value = "";
 
+        // Send the message to the server
+        socket.send(message);
+      });
+
+      // Add an event listener to the WebSocket to handle messages from the server
+      socket.onmessage = (event) => {
         // Create a new chat message element
         const messageElement = document.createElement("div");
         messageElement.classList.add("chat-message");
-        messageElement.textContent = message;
+        messageElement.textContent = event.data;
 
         // Add the message element to the chat container
         chatContainer.appendChild(messageElement);
 
         // Scroll the chat container to the bottom to view the latest message
         chatContainer.scrollTop = chatContainer.scrollHeight;
-      });
+      };
     </script>
   </body>
 </html>
