@@ -4,7 +4,7 @@ const WebSocket = require('ws');
 
 const server = https.createServer({
   cert: fs.readFileSync('path/to/server.crt'),
-  key: fs.readFileSync('path/to/server.key')
+  key: fs.readFileSync('/home/pink/ssl-cert/privkey.pem')
 });
 const wss = new WebSocket.Server({ server });
 
