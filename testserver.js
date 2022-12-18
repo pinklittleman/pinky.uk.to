@@ -15,4 +15,4 @@ wss.on('connection', (ws) => {
   });
 });
 
-server.listen(9443);
+server.listen(5000);
