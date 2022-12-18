@@ -35,7 +35,9 @@ form.addEventListener('submit', (event) => {
       const data = reader.result;
       const text = []
       text.push(data)
-      document.getElementById('text').innerHTML = data
+      document.getElementById('text').innerHTML = array.forEach(element => {
+        data
+      });
       console.log(event)
     };
   };
