@@ -21,10 +21,7 @@ form.addEventListener('submit', (event) => {
   const socket = new WebSocket('wss://pinky.uk.to:5000');
 
   // Send the message to the server when the WebSocket is open
-  socket.onopen = () => {
-
-    };
-  };
+  
 
   // Display the message from the server
   socket.onmessage = (event) => {
