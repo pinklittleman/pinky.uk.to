@@ -33,7 +33,6 @@ form.addEventListener('submit', (event) => {
     reader.readAsText(event.data, 'utf-8');
     reader.onloadend = () => {
       const data = reader.result;
-      const text = []
       text.push(data)
       document.getElementById('text').innerHTML = text
       console.log(event)
