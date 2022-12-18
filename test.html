@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <style>
+      /* Add some style to the chat page */
+      body {
+        font-family: sans-serif;
+      }
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 500px;
+        border: 1px solid gray;
+        overflow-y: scroll;
+      }
+      .chat-message {
+        padding: 10px;
+        border-bottom: 1px solid gray;
+      }
+      .chat-form {
+        display: flex;
+        flex-direction: row;
+      }
+      .chat-input {
+        flex: 1;
+        height: 30px;
+        border: none;
+        outline: none;
+      }
+      .chat-button {
+        height: 30px;
+        border: none;
+        outline: none;
+        background-color: lightblue;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Add a container to hold the chat messages -->
+      <div id="chat-messages"></div>
+      <!-- Add a form to send new messages -->
+      <form class="chat-form">
+        <input class="chat-input" type="text" id="chat-input" />
+        <button class="chat-button" type="submit">Send</button>
+      </form>
+    </div>
+    <script>
+      // Get references to the chat container and form elements
+      const chatContainer = document.querySelector(".chat-container");
+      const chatForm = document.querySelector(".chat-form");
+      const chatInput = document.querySelector("#chat-input");
+
+      // Add an event listener to the form to handle submit events
+      chatForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the value of the chat input field
+        const message = chatInput.value;
+
+        // Clear the input field
+        chatInput.value = "";
+
+        // Create a new chat message element
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("chat-message");
+        messageElement.textContent = message;
+
+        // Add the message element to the chat container
+        chatContainer.appendChild(messageElement);
+
+        // Scroll the chat container to the bottom to view the latest message
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      });
+    </script>
+  </body>
+</html>
