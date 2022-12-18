@@ -23,7 +23,7 @@
 
       // Send the message to the server when the WebSocket is open
       socket.onopen = () => {
-        socket.send(new Blob([messageInput.value));
+        socket.send(new Blob([messageInput.value]));
       };
 
       // Display the message from the server
