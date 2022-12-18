@@ -27,10 +27,17 @@ form.addEventListener('submit', (event) => {
 
   // Display the message from the server
   socket.onmessage = (event) => {
-    alert(event.data);
-    console.log(event)
+    // Read the data from the Blob object as a string
+    const reader = new FileReader();
+    reader.readAsText(event.data, 'utf-8');
+    reader.onloadend = () => {
+      const data = reader.result;
+      alert(data);
+      console.log(event)
+    };
   };
 });
+
   </script>
 </body>
 </html>
