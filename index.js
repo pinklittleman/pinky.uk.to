@@ -19,7 +19,7 @@ function loop(){
         inc = 1
     }
     if(y > canvas.width-size){
-        inc = -1
+        dec = -1
     }
     if(y < 0+size){
         inc = 1
