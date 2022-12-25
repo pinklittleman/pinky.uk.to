@@ -12,7 +12,7 @@ function draw(){
 
 function loop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    if(x > canva){
+    if(x > canvas.){
 
     }
     x += 0.5
