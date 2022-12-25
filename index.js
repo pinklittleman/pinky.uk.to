@@ -18,6 +18,12 @@ function loop(){
     if(x < 0+size){
         inc = 1
     }
+    if(x > canvas.width-size){
+        inc = -1
+    }
+    if(x < 0+size){
+        inc = 1
+    }
     x += inc
     y += dec
     draw()
