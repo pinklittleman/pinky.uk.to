@@ -22,7 +22,7 @@ function loop(){
         dec = -1
     }
     if(y < 0+size){
-        inc = 1
+        dec = 1
     }
     x += inc
     y += dec
