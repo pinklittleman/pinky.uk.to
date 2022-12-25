@@ -10,7 +10,7 @@ function draw(){
 function loop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     x += 0.5
-    
+    y 
     draw()
     requestAnimationFrame(loop)
 }
