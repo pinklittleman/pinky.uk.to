@@ -16,7 +16,7 @@ function loop(){
         inc = -1
     }
     if(x < 0+size){
-        inc = -1
+        inc = 1
     }
     x += inc
     y += dec
