@@ -12,12 +12,12 @@ function draw(){
 
 function loop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    if(x > canvas.width-size){
-        inc = -1
-    }
-    if(x < 0+size){
-        inc = 1
-    }
+    // if(x > canvas.width-size){
+    //     inc = -1
+    // }
+    // if(x < 0+size){
+    //     inc = 1
+    // }
     x += inc
     y += dec
     draw()
