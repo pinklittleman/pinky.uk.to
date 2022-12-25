@@ -19,7 +19,7 @@ function loop(){
     //     inc = 1
     // }
     x += inc
-    y += dec
+    y += 0
     draw()
     requestAnimationFrame(loop)
 }
