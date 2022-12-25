@@ -1,7 +1,7 @@
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 let x = 100, y = 100
-canvas
+canvas.width = inner
 
 function draw(){
    ctx.fillStyle = "#9916ff";
