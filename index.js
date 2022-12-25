@@ -13,7 +13,7 @@ function draw(){
 function loop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     if(x > canvas.width-size){
-        inc = 1
+        inc = 
     }
     x += inc
     y += dec
