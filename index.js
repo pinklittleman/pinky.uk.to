@@ -16,7 +16,7 @@ function loop(){
         
     }
     x += inc
-    y += 0.5
+    y += dec
     draw()
     requestAnimationFrame(loop)
 }
