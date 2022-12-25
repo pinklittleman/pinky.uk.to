@@ -15,7 +15,7 @@ function loop(){
     if(x > canvas.width-size){
         
     }
-    x += 
+    x += inc
     y += 0.5
     draw()
     requestAnimationFrame(loop)
