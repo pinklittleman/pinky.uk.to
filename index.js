@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")
 let x = 100, y = 100
 canvas.width = innerWidth
 canvas.height = innerHeight
-inc
+let inc, dec
 
 function draw(){
    ctx.fillStyle = "#9916ff";
