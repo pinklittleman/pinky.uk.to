@@ -15,7 +15,7 @@ function loop(){
     if(x > canvas.width-size){
         inc = -1
     }
-    if(x < canvas.width-size){
+    if(x < 0-size){
         inc = -1
     }
     x += inc
