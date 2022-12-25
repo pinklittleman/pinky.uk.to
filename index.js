@@ -7,7 +7,7 @@ let inc, dec
 
 function draw(){
    ctx.fillStyle = "#9916ff";
-   ctx.fillRect(x, y, 2, 2);
+   ctx.fillRect(x, y, 5, 5);
 }
 
 function loop(){
