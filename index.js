@@ -1,7 +1,7 @@
 const canveas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 let x = 100, y = 100
-
+canve
 
 function draw(){
    ctx.fillStyle = "#9916ff";
