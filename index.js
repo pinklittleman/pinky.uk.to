@@ -12,8 +12,8 @@ function draw(){
 
 function loop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    if(){
-        
+    if(x){
+
     }
     x += 0.5
     y += 0.5
